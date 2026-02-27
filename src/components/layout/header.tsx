@@ -10,6 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import logoImage from 'src/assets/icons/logo.png';
+
 import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
@@ -103,45 +105,9 @@ export function AppHeader({ onOpenSidebar }: AppHeaderProps) {
             </IconButton>
           )}
           <LogoContainer>
-            <Logo src="/logo/logo-single.svg" alt="Pepagera" />
+            <Logo src={logoImage} alt="Pepagera" />
           </LogoContainer>
 
-          <LanguageCurrencyContainer>
-            <Button
-              variant="text"
-              size="small"
-              onClick={handleLanguageClick}
-              sx={{ minWidth: 'auto', px: 1, color: 'text.secondary' }}
-            >
-              EN | IN
-            </Button>
-            <Menu
-              anchorEl={languageAnchor}
-              open={Boolean(languageAnchor)}
-              onClose={handleLanguageClose}
-            >
-              <MenuItem onClick={handleLanguageClose}>English</MenuItem>
-              <MenuItem onClick={handleLanguageClose}>Hindi</MenuItem>
-            </Menu>
-
-            <Button
-              variant="text"
-              size="small"
-              onClick={handleCurrencyClick}
-              sx={{ minWidth: 'auto', px: 1, color: 'text.secondary' }}
-            >
-              ₹
-            </Button>
-            <Menu
-              anchorEl={currencyAnchor}
-              open={Boolean(currencyAnchor)}
-              onClose={handleCurrencyClose}
-            >
-              <MenuItem onClick={handleCurrencyClose}>₹ INR</MenuItem>
-              <MenuItem onClick={handleCurrencyClose}>$ USD</MenuItem>
-              <MenuItem onClick={handleCurrencyClose}>€ EUR</MenuItem>
-            </Menu>
-          </LanguageCurrencyContainer>
         </Box>
 
         {/* Right Section - Actions */}

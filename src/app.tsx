@@ -1,4 +1,4 @@
-import 'src/global.css';
+import 'src/main.css';
 
 import { useEffect } from 'react';
 

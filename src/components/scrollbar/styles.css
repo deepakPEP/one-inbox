@@ -6,3 +6,7 @@
 .simplebar-scrollbar.simplebar-visible:before {
   opacity: 0.48;
 }
+
+.simplebar-content svg {
+  color: red;
+}
